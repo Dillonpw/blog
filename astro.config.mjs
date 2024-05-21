@@ -4,27 +4,31 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'Docs with Tailwind',
-			social: {
-				github: 'https://github.com/withastro/starlight',
+    integrations: [
+        starlight({
+            title: 'Dillons Blog',
+			logo: {
+				src: './src/assets/logo.svg'
 			},
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
-			customCss: ['./src/tailwind.css'],
-		}),
-		tailwind({ applyBaseStyles: false }),
-	],
+			favicon: './src/assets/logo.svg',
+            social: {
+                github: 'https://github.com/dillonpw',
+            },
+            sidebar: [
+                {
+                    label: 'posts',
+                    items: [
+                        // Each item here is one entry in the navigation menu.
+                        { label: 'Example post', link: '/posts/example/' },
+                    ],
+                },
+                {
+                    label: 'Reference',
+                    autogenerate: { directory: 'reference' },
+                },
+            ],
+            customCss: ['./src/tailwind.css'],
+        }),
+        tailwind({ applyBaseStyles: false }),
+    ],
 });
