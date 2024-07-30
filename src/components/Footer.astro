@@ -2,7 +2,9 @@
 const today = new Date();
 ---
 
-<footer>
+<footer
+  class="flex max-h-[30%] flex-col items-center justify-center text-zinc-600"
+>
   &copy; {today.getFullYear()} Dillon Walsh. All rights reserved.
   <div class="flex justify-center gap-4">
     <a href="https://twitter.com/dillonpw_" target="_blank">
@@ -37,11 +39,3 @@ const today = new Date();
     </a>
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-</style>
