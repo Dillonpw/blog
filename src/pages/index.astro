@@ -1,9 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import Layout from "../layouts/BaseLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
     <main>
       <h1 class="text-3xl text-center">Title</h1>
       <p>
@@ -50,4 +50,4 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
       </p>
     </main>
-  </BaseLayout>
+  </Layout>
