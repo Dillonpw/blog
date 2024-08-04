@@ -1,21 +1,26 @@
 ---
 import { Image } from "astro:assets";
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header class="">
   <nav
-    class="fixed top-0 z-50 flex w-[100%] flex-row items-center justify-between bg-neutral-50 p-6 shadow-md dark:border-b dark:border-neutral-700 dark:bg-neutral-950"
+    class="fixed top-0 z-50 flex w-[100%] flex-row items-center justify-between bg-transparent p-6 shadow-md backdrop-blur-sm dark:border-b dark:border-neutral-700 dark:bg-neutral-950"
   >
     <a href="/"
-      ><Image src="/logo.svg" alt="logo" width="50" height="50" />
+      ><Image
+        src="/logo.svg"
+        alt="logo"
+        width="50"
+        height="50"
+        class="hover:scale-105"
+      />
       <div
         class="text-md flex justify-center gap-6 px-2 md:text-xl lg:text-2xl"
       >
         <HeaderLink href="/">Home</HeaderLink>
-        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/posts">Posts</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>
       </div>
       <div class="flex gap-2">

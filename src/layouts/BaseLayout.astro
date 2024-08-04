@@ -13,19 +13,18 @@ const { title, description } = Astro.props;
     <BaseHead title={title} description={description} />
     <script is:inline>
       if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
-        document.documentElement.classList.add("dark");
+        document.documentElement.classList.add('dark');
       } else {
-        document.documentElement.classList.remove("dark");
+        document.documentElement.classList.remove('dark');
       }
     </script>
     <script src="https://kit.fontawesome.com/5d2a9b059b.js" crossorigin="anonymous"></script>
   </head>
   <body
-    class="relative mt-40 bg-neutral-50 text-slate-900 dark:bg-neutral-950 dark:text-gray-200"
+    class="mt-40 bg-neutral-50 text-slate-900 dark:bg-neutral-950 dark:text-gray-200"
   >
     <Header />
     <main class="px-[20%]">
